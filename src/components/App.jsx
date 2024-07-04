@@ -1,16 +1,18 @@
+import { About } from './About/About';
+import { SharedLayout } from './App.styled';
+import { Header } from './Header/Header';
+import { Hero } from './Hero/Hero';
+import { Specializations } from './Specializations/Specializations';
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <SharedLayout>
+        <Header />
+        <Hero />
+        <Specializations />
+        <About />
+      </SharedLayout>
+    </>
   );
 };
