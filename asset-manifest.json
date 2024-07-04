@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/RMC/static/css/main.7acaea2f.css",
-    "main.js": "/RMC/static/js/main.07d3183d.js",
+    "main.css": "/RMC/static/css/main.d688e9c1.css",
+    "main.js": "/RMC/static/js/main.2b21a131.js",
+    "static/media/hero-bg.png": "/RMC/static/media/hero-bg.9773f810529193ab3423.png",
+    "static/media/Specializations-4.jpg": "/RMC/static/media/Specializations-4.3b7e93b1256234bf2a38.jpg",
+    "static/media/About-1.jpg": "/RMC/static/media/About-1.085d6c44855ba1c4ee67.jpg",
+    "static/media/Specializations-2.jpg": "/RMC/static/media/Specializations-2.8500f14b13688ee09e68.jpg",
+    "static/media/About-2.jpg": "/RMC/static/media/About-2.5b3938de919dfad096d2.jpg",
+    "static/media/Specializations-1.jpg": "/RMC/static/media/Specializations-1.03edeea5f752e0d9e18c.jpg",
+    "static/media/Specializations-3.jpg": "/RMC/static/media/Specializations-3.4f4bee81ceba8bbd8819.jpg",
+    "static/media/hero-img.jpg": "/RMC/static/media/hero-img.8440ecdbeeb7a779f3dd.jpg",
+    "static/media/About-3.jpg": "/RMC/static/media/About-3.502b845a730b29f2324d.jpg",
+    "static/media/sprite.svg": "/RMC/static/media/sprite.6fc583879731c0ef04f6619ad1d1e7a3.svg",
     "index.html": "/RMC/index.html",
-    "main.7acaea2f.css.map": "/RMC/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/RMC/static/js/main.07d3183d.js.map"
+    "main.d688e9c1.css.map": "/RMC/static/css/main.d688e9c1.css.map",
+    "main.2b21a131.js.map": "/RMC/static/js/main.2b21a131.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/css/main.d688e9c1.css",
+    "static/js/main.2b21a131.js"
   ]
 }
