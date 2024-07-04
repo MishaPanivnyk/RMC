@@ -30,9 +30,10 @@ export const AboutImgContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 18px;
+  margin-top: 10px;
   margin-bottom: 30px;
   .about-down {
-    margin-top: 50px;
+    margin-top: 40px;
   }
 `;
 export const AboutImg = styled.img``;
