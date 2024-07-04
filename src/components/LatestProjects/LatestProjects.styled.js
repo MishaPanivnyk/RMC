@@ -57,4 +57,5 @@ export const LatestProjectsItemText = styled.button`
   line-height: 16px;
   background: inherit;
   border: none;
+  cursor: pointer;
 `;
