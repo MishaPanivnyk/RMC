@@ -2,6 +2,7 @@ import { About } from './About/About';
 import { SharedLayout } from './App.styled';
 import { Header } from './Header/Header';
 import { Hero } from './Hero/Hero';
+import { LatestProjects } from './LatestProjects/LatestProjects';
 import { Specializations } from './Specializations/Specializations';
 
 export const App = () => {
@@ -12,6 +13,7 @@ export const App = () => {
         <Hero />
         <Specializations />
         <About />
+        <LatestProjects />
       </SharedLayout>
     </>
   );
