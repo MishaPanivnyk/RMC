@@ -125,6 +125,7 @@ export const FooterCopyright = styled.p`
   padding-top: 10px;
   border-top: 1px solid #fff;
   & a {
+    cursor: pointer;
     text-decoration: none;
     margin-left: 5px;
     color: #ffb077;
