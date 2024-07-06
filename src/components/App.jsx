@@ -1,6 +1,7 @@
 import { About } from './About/About';
 import { SharedLayout } from './App.styled';
 import { DigitalExperience } from './DigitalExperience/DigitalExperience';
+import { Footer } from './Footer/Footer';
 import { Header } from './Header/Header';
 import { Hero } from './Hero/Hero';
 import { LatestProjects } from './LatestProjects/LatestProjects';
@@ -16,6 +17,7 @@ export const App = () => {
         <About />
         <LatestProjects />
         <DigitalExperience />
+        <Footer />
       </SharedLayout>
     </>
   );
