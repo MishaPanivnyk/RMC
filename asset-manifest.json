@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/RMC/static/css/main.d688e9c1.css",
-    "main.js": "/RMC/static/js/main.deded0be.js",
+    "main.css": "/RMC/static/css/main.ccc75f37.css",
+    "main.js": "/RMC/static/js/main.9d4e049e.js",
     "static/media/hero-bg.png": "/RMC/static/media/hero-bg.9773f810529193ab3423.png",
     "static/media/Specializations-4.jpg": "/RMC/static/media/Specializations-4.3b7e93b1256234bf2a38.jpg",
     "static/media/About-1.jpg": "/RMC/static/media/About-1.085d6c44855ba1c4ee67.jpg",
@@ -9,20 +9,27 @@
     "static/media/About-2.jpg": "/RMC/static/media/About-2.5b3938de919dfad096d2.jpg",
     "static/media/Specializations-1.jpg": "/RMC/static/media/Specializations-1.03edeea5f752e0d9e18c.jpg",
     "static/media/Specializations-3.jpg": "/RMC/static/media/Specializations-3.4f4bee81ceba8bbd8819.jpg",
+    "static/media/Gallery-3.jpg": "/RMC/static/media/Gallery-3.b36d118e24277e847a4c.jpg",
     "static/media/LatestProjects-4.jpg": "/RMC/static/media/LatestProjects-4.4f84d15c81e57e49248b.jpg",
     "static/media/hero-img.jpg": "/RMC/static/media/hero-img.8440ecdbeeb7a779f3dd.jpg",
     "static/media/DigitalExperience-svg.svg": "/RMC/static/media/DigitalExperience-svg.78e1915567679b1563b485203096eac4.svg",
+    "static/media/Gallery-1.jpg": "/RMC/static/media/Gallery-1.94a3cde1c7dbe79c88e5.jpg",
+    "static/media/Gallery-6.jpg": "/RMC/static/media/Gallery-6.94a3cde1c7dbe79c88e5.jpg",
+    "static/media/Gallery-5.jpg": "/RMC/static/media/Gallery-5.60891f7032d477142045.jpg",
     "static/media/LatestProjects-2.jpg": "/RMC/static/media/LatestProjects-2.6fa493431d216fec6bd5.jpg",
+    "static/media/Gallery-2.jpg": "/RMC/static/media/Gallery-2.d29cd6f147e262ddb5bb.jpg",
+    "static/media/Gallery-7.jpg": "/RMC/static/media/Gallery-7.d29cd6f147e262ddb5bb.jpg",
     "static/media/About-3.jpg": "/RMC/static/media/About-3.502b845a730b29f2324d.jpg",
+    "static/media/Gallery-4.jpg": "/RMC/static/media/Gallery-4.e68b1470fb98d89bf9dd.jpg",
     "static/media/LatestProjects-3.jpg": "/RMC/static/media/LatestProjects-3.6a5b0909745b00c40445.jpg",
     "static/media/LatestProjects-1.jpg": "/RMC/static/media/LatestProjects-1.0ee1cb66a7d11cc81e69.jpg",
     "static/media/sprite.svg": "/RMC/static/media/sprite.6fc583879731c0ef04f6619ad1d1e7a3.svg",
     "index.html": "/RMC/index.html",
-    "main.d688e9c1.css.map": "/RMC/static/css/main.d688e9c1.css.map",
-    "main.deded0be.js.map": "/RMC/static/js/main.deded0be.js.map"
+    "main.ccc75f37.css.map": "/RMC/static/css/main.ccc75f37.css.map",
+    "main.9d4e049e.js.map": "/RMC/static/js/main.9d4e049e.js.map"
   },
   "entrypoints": [
-    "static/css/main.d688e9c1.css",
-    "static/js/main.deded0be.js"
+    "static/css/main.ccc75f37.css",
+    "static/js/main.9d4e049e.js"
   ]
 }
