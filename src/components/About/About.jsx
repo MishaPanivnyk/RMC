@@ -45,7 +45,7 @@ export const About = () => {
           </AboutNumber>
           <AboutNumberDesc>Satisfied Clients</AboutNumberDesc>
         </AboutNumberContainer>
-        <AboutImg src={aboutImage3} alt="about" width={'388px'} />
+        <AboutImg src={aboutImage3} alt="about" width={'100%'} />
       </Container>
     </AboutContainer>
   );

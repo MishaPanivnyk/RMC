@@ -46,7 +46,7 @@ export const DigitalExperience = () => {
           </DigitalExperienceNumberListItem>
         </DigitalExperienceNumberList>
         <DigitalExperienceBtn>Lets work together</DigitalExperienceBtn>
-        <DigitalExperienceImg src={planImage} alt="Plan" />
+        <DigitalExperienceImg src={planImage} alt="Plan" width={'100%'} />
       </Container>
     </DigitalExperienceContainer>
   );
