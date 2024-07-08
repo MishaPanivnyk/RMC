@@ -6,6 +6,7 @@ import { Gallery } from './Gallery/Gallery';
 import { Header } from './Header/Header';
 import { Hero } from './Hero/Hero';
 import { LatestProjects } from './LatestProjects/LatestProjects';
+import { MeetTeam } from './MeetTeam/MeetTeam';
 import { Specializations } from './Specializations/Specializations';
 
 export const App = () => {
@@ -18,6 +19,7 @@ export const App = () => {
         <About />
         <LatestProjects />
         <DigitalExperience />
+        <MeetTeam />
         <Gallery />
         <Footer />
       </SharedLayout>
