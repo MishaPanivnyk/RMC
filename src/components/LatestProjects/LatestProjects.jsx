@@ -38,27 +38,27 @@ export const LatestProjects = () => {
           <LatestProjectsImg
             src={LatestProjectsImage1}
             alt="LatestProjects"
-            width={'189px'}
+            width={'179px'}
             height={'280px'}
           />
           <LatestProjectsImg
             src={LatestProjectsImage2}
             alt="LatestProjects"
             className="img-down"
-            width={'189px'}
+            width={'179px'}
             height={'280px'}
           />
           <LatestProjectsImg
             src={LatestProjectsImage3}
             alt="LatestProjects"
-            width={'189px'}
+            width={'179px'}
             height={'280px'}
           />
           <LatestProjectsImg
             src={LatestProjectsImage4}
             alt="LatestProjects"
             className="img-down"
-            width={'189px'}
+            width={'179px'}
             height={'280px'}
           />
         </LatestProjectsImgContainer>
