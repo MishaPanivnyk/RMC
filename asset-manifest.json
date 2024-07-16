@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RMC/static/css/main.ccc75f37.css",
-    "main.js": "/RMC/static/js/main.354c5f70.js",
+    "main.js": "/RMC/static/js/main.ec4c4c4f.js",
     "static/media/hero-bg.png": "/RMC/static/media/hero-bg.9773f810529193ab3423.png",
     "static/media/MeetTeam.jpg": "/RMC/static/media/MeetTeam.1d17a48a085b32a8f794.jpg",
     "static/media/Specializations-4.jpg": "/RMC/static/media/Specializations-4.3b7e93b1256234bf2a38.jpg",
@@ -27,10 +27,10 @@
     "static/media/sprite.svg": "/RMC/static/media/sprite.6fc583879731c0ef04f6619ad1d1e7a3.svg",
     "index.html": "/RMC/index.html",
     "main.ccc75f37.css.map": "/RMC/static/css/main.ccc75f37.css.map",
-    "main.354c5f70.js.map": "/RMC/static/js/main.354c5f70.js.map"
+    "main.ec4c4c4f.js.map": "/RMC/static/js/main.ec4c4c4f.js.map"
   },
   "entrypoints": [
     "static/css/main.ccc75f37.css",
-    "static/js/main.354c5f70.js"
+    "static/js/main.ec4c4c4f.js"
   ]
 }
