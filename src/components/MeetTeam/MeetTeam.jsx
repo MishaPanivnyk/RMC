@@ -9,6 +9,7 @@ import {
 } from './MeetTeam.styled';
 import meetTeamImage from '../../img/MeetTeam.jpg';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const containerVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -28,12 +29,17 @@ const itemVariants = {
 };
 
 export const MeetTeam = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
   return (
-    <MeetTeamContainer>
+    <MeetTeamContainer ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={inView ? 'visible' : 'hidden'}
           variants={containerVariants}
         >
           <motion.div variants={itemVariants}>
@@ -46,7 +52,7 @@ export const MeetTeam = () => {
       </Container>
       <motion.div
         initial="hidden"
-        animate="visible"
+        animate={inView ? 'visible' : 'hidden'}
         variants={containerVariants}
       >
         <MeetTeamImageContainer>

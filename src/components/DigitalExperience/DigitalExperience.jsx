@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Container } from 'components/Container/Container';
 import {
   DigitalExperienceBtn,
@@ -9,7 +11,7 @@ import {
   DigitalExperienceNumberListItem,
   DigitalExperienceTitle,
 } from './DigitalExperience.styled';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import planImage from '../../img/DigitalExperience-svg.svg';
 
 const containerVariants = {
@@ -30,12 +32,21 @@ const itemVariants = {
 };
 
 export const DigitalExperience = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <DigitalExperienceContainer>
+    <DigitalExperienceContainer ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={controls}
           variants={containerVariants}
         >
           <motion.div variants={itemVariants}>

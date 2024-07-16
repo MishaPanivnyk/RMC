@@ -1,9 +1,11 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { GalleryContainer } from './Gallery.styled';
 import { Scrollbar } from 'swiper/modules';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import galleryImage1 from '../../img/Gallery/Gallery-1.jpg';
 import galleryImage2 from '../../img/Gallery/Gallery-2.jpg';
 import galleryImage3 from '../../img/Gallery/Gallery-3.jpg';
@@ -18,8 +20,17 @@ const slideVariants = {
 };
 
 export const Gallery = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <GalleryContainer>
+    <GalleryContainer ref={ref}>
       <Swiper
         slidesPerView={2}
         spaceBetween={120}
@@ -43,7 +54,7 @@ export const Gallery = () => {
               src={image}
               alt={`gallery-${index}`}
               initial="hidden"
-              animate="visible"
+              animate={controls}
               variants={slideVariants}
             />
           </SwiperSlide>

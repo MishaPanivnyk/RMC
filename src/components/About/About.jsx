@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Container } from 'components/Container/Container';
 import {
   AboutContainer,
@@ -9,7 +11,7 @@ import {
   AboutNumberDesc,
   AboutTitle,
 } from './About.styled';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import aboutImage1 from '../../img/About-1.jpg';
 import aboutImage2 from '../../img/About-2.jpg';
 import aboutImage3 from '../../img/About-3.jpg';
@@ -20,7 +22,7 @@ const containerVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.8,
       staggerChildren: 0.3,
     },
   },
@@ -28,25 +30,38 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 1 } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
 };
 
 export const About = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <AboutContainer>
+    <AboutContainer ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={controls}
           variants={containerVariants}
         >
-          <AboutTitle>About Us</AboutTitle>
-          <AboutDesk>
-            As development continues, engineers may visit building destinations
-            to guarantee that temporary workers pursue the plan, keep to the
-            timetable, utilize the predefined materials, and meet work-quality
-            models.
-          </AboutDesk>
+          <motion.div variants={itemVariants}>
+            <AboutTitle>About Us</AboutTitle>
+          </motion.div>
+          <motion.div variants={itemVariants}>
+            <AboutDesk>
+              As development continues, engineers may visit building
+              destinations to guarantee that temporary workers pursue the plan,
+              keep to the timetable, utilize the predefined materials, and meet
+              work-quality models.
+            </AboutDesk>
+          </motion.div>
           <AboutImgContainer>
             <motion.div variants={itemVariants}>
               <AboutImg

@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Container } from 'components/Container/Container';
 import {
   LatestProjectsContainer,
@@ -9,7 +11,7 @@ import {
   LatestProjectsPreDesk,
   LatestProjectsTitle,
 } from './LatestProjects.styled';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import LatestProjectsImage1 from '../../img/LatestProjects-1.jpg';
 import LatestProjectsImage2 from '../../img/LatestProjects-2.jpg';
 import LatestProjectsImage3 from '../../img/LatestProjects-3.jpg';
@@ -33,12 +35,21 @@ const itemVariants = {
 };
 
 export const LatestProjects = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <LatestProjectsContainer>
+    <LatestProjectsContainer ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={controls}
           variants={containerVariants}
         >
           <LatestProjectsPreDesk>OUR PROJECT</LatestProjectsPreDesk>
@@ -65,7 +76,7 @@ export const LatestProjects = () => {
                 <LatestProjectsImg
                   src={image}
                   alt={`LatestProjects ${index + 1}`}
-                  width={'179px'}
+                  width={'170px'}
                   height={'280px'}
                   className={index % 2 === 1 ? 'img-down' : ''}
                 />

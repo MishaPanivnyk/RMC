@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { Container } from 'components/Container/Container';
 import {
   FooterBlock,
@@ -14,24 +16,36 @@ import {
   FooterLogoLink,
 } from './Footer.styled';
 import sprite from 'img/sprite.svg';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 const footerVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 1, ease: 'easeOut' },
+    transition: { duration: 0.6, ease: 'easeOut' },
   },
 };
 
 export const Footer = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start('visible');
+    }
+  }, [controls, inView]);
+
   return (
-    <FooterContainer>
+    <FooterContainer ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={controls}
           variants={footerVariants}
         >
           <FooterLogoLink>

@@ -11,6 +11,7 @@ import {
   SpecializationsTitle,
 } from './Specializations.styled';
 import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 import SpecializationsImage1 from '../../img/Specializations-1.jpg';
 import SpecializationsImage2 from '../../img/Specializations-2.jpg';
@@ -37,12 +38,17 @@ const itemVariants = {
 };
 
 export const Specializations = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
   return (
-    <SpecializationsContainer>
+    <SpecializationsContainer ref={ref}>
       <Container>
         <motion.div
           initial="hidden"
-          animate="visible"
+          animate={inView ? 'visible' : 'hidden'}
           variants={containerVariants}
         >
           <SpecializationsPreDesk>TOP SERVICES</SpecializationsPreDesk>
@@ -73,7 +79,7 @@ export const Specializations = () => {
           <SwiperSlide key={index}>
             <motion.div
               initial="hidden"
-              animate="visible"
+              animate={inView ? 'visible' : 'hidden'}
               variants={itemVariants}
             >
               <SpecializationsImg
